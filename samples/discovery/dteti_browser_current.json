@@ -1,0 +1,62 @@
+{
+  "captured_at_utc": "2026-11-19T08:40:27.601Z",
+  "source_url": "https://www.iqair.com/id/air-quality/indonesia/yogyakarta/sleman/smart-censor-dteti-lt-4",
+  "type": "station",
+  "details": {
+    "id": "69cb6499b52a87c536f30bf8",
+    "name": "Smart Censor DTETI Lt. 4",
+    "type": "station",
+    "timezone": "Asia/Jakarta",
+    "coordinates": {
+      "latitude": -7.766,
+      "longitude": 110.3718
+    },
+    "contributors": [
+      {
+        "type": "Contributor",
+        "subtype": "Education",
+        "name": "Sensor IQAir DTETI",
+        "followersCount": 3553,
+        "priority": 90,
+        "stationsCount": 1,
+        "pictureURL": "https://lh3.googleusercontent.com/a/ACg8ocKBwVkjQ8h5cuY17SXoEYcu2dhCFtiDgYh_HUrLT-yVUGzqSw=s96-c",
+        "url": "profile/qydys9nr2"
+      }
+    ],
+    "current": {
+      "ts": "2026-11-19T07:00:00.000Z",
+      "aqi": 77,
+      "mainPollutant": "pm25",
+      "concentration": 23,
+      "estimated": false,
+      "WHOExposure": {
+        "WHOExposure": 4.6,
+        "WHOExposureColor": "red"
+      },
+      "condition": "Rain",
+      "icon": "10d",
+      "humidity": 89,
+      "pressure": 1009,
+      "wind": {
+        "speed": 5,
+        "direction": 173
+      },
+      "temperature": 26,
+      "pollutants": [
+        {
+          "unit": "µg/m³",
+          "description": "Fine particles (≤ 2.5 µm)",
+          "aqi": 77,
+          "concentration": 23,
+          "pollutantName": "pm25"
+        }
+      ],
+      "aqiDescription": "Air quality index"
+    }
+  },
+  "ui": {
+    "heading": "<h1 class=\"text-input-text lgsm:text-4xl lgsm:leading-[44px] text-[28px] leading-[36px] font-bold tracking-[.38px]\">Kualitas udara di dekat Smart Censor DTETI Lt. 4, Sleman</h1>",
+    "label": "<h2 class=\"lgsm:text-left lgsm:text-[18px] lgsm:leading-[28px] text-center text-[14px] leading-[20px] font-normal tracking-[-.44px] text-gray-700\">Indeks kualitas udara (AQI⁺) dan polusi udara PM2.5 di dekat Smart Censor DTETI Lt. 4, Sleman • 3.6K Pengikut • 14.00, Nov 19</h2>",
+    "history_capture_error": "TimeoutError"
+  }
+}

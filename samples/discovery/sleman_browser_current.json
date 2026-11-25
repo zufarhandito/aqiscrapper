@@ -1,0 +1,69 @@
+{
+  "captured_at_utc": "2026-11-18T01:57:28.655Z",
+  "details": {
+    "contributors": [
+      {
+        "followersCount": 15912,
+        "name": "Indonesian Meteorology, Climatology, and Geophysics Council ",
+        "pictureURL": "https://cdn.airvisual.net/gov/tiny/indonesian-meteorology-climatology-and-geophysics-council-avatar-bmkg.png",
+        "priority": 50,
+        "stationsCount": 1,
+        "subtype": "Government",
+        "type": "Government",
+        "url": "profile/indonesian-meteorology-climatology-and-geophysics-council",
+        "websiteURL": "http://bmkg.go.id"
+      }
+    ],
+    "coordinates": {
+      "latitude": -7.731,
+      "longitude": 110.354
+    },
+    "current": {
+      "WHOExposure": {
+        "WHOExposure": 7.7,
+        "WHOExposureColor": "red"
+      },
+      "aqi": 109,
+      "aqiDescription": "Air quality index",
+      "concentration": 38.6,
+      "condition": "Scattered clouds",
+      "estimated": false,
+      "humidity": 74,
+      "icon": "03d",
+      "mainPollutant": "pm25",
+      "pollutants": [
+        {
+          "aqi": 109,
+          "concentration": 38.6,
+          "description": "Fine particles (≤ 2.5 µm)",
+          "pollutantName": "pm25",
+          "unit": "µg/m³"
+        }
+      ],
+      "pressure": 1016,
+      "temperature": 27,
+      "ts": "2026-11-18T00:00:00.000Z",
+      "wind": {
+        "direction": 183,
+        "speed": 7
+      }
+    },
+    "id": "7165697aab08555d97b4",
+    "name": "SLEMAN",
+    "timezone": "Asia/Jakarta",
+    "type": "station"
+  },
+  "source_url": "https://www.iqair.com/id/air-quality/indonesia/yogyakarta/sleman/sleman",
+  "state_strings": [
+    "measurements",
+    "hourly",
+    "pm25",
+    "concentration"
+  ],
+  "type": "station",
+  "ui": {
+    "heading": "<h1 class=\"text-input-text lgsm:text-4xl lgsm:leading-[44px] text-[28px] leading-[36px] font-bold tracking-[.38px]\">Kualitas udara di dekat SLEMAN, Sleman</h1>",
+    "history": "Kualitas udara historis di dekat SLEMAN\nRiwayat\n\nGrafik riwayat kualitas udara untuk SLEMAN\n\n109 AQI⁺ US\nTidak sehat bagi kelompok sensitif\n06.00–07.00 18 Nov \nper jam\nper hari\nbulanan\n\nAQI⁺ US\n\nAQI⁺ US\n09.00\n15.00\n21.00\n03.00\n09.00\n15.00\n21.00\n03.00\n0\n30\n60\n90\n120\n150\n",
+    "label": "<h2 class=\"lgsm:text-left lgsm:text-[18px] lgsm:leading-[28px] text-center text-[14px] leading-[20px] font-normal tracking-[-.44px] text-gray-700\">Indeks kualitas udara (AQI⁺) dan polusi udara PM2.5 di dekat SLEMAN, Sleman • 15.9K Pengikut • 07.00, Nov 18</h2>"
+  }
+}

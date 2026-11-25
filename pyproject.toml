@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iqair-yogyakarta-collector"
+version = "0.1.0"
+description = "Current-only browser PM2.5 collector with local CSV output"
+requires-python = ">=3.12"
+dependencies = ["playwright>=1.50,<2", "python-dotenv>=1,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+iqair-collector = "iqair_collector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+iqair_collector = ["*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

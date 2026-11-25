@@ -1,0 +1,10 @@
+[Unit]
+Description=Hourly future weather forecast collection (Open-Meteo + BMKG)
+
+[Timer]
+OnCalendar=*-*-* *:02:00
+Persistent=true
+Unit=iqair-weather.service
+
+[Install]
+WantedBy=timers.target

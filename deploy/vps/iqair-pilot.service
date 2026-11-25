@@ -1,0 +1,27 @@
+[Unit]
+Description=IQAir local CSV collector - 90 day collection (VPS)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=iqair
+WorkingDirectory=/home/iqair/iqair-collector
+Environment=PYTHONUNBUFFERED=1
+Environment=IQAIR_AUTOMATION_AUTHORIZED=true
+Environment=SCHEDULED_COLLECTION_ENABLED=true
+Environment=COLLECTION_START_UTC=2026-11-19T07:42:03Z
+Environment=COLLECTION_DURATION_DAYS=90
+Environment=POLL_MINUTE_LOCAL=15
+Environment=DATA_DIR=/home/iqair/iqair-collector/data
+ExecStart=/home/iqair/iqair-collector/.venv/bin/python -m iqair_collector schedule --all
+# Failures/denial require review; never restart automatically to repeat denied access.
+Restart=no
+TimeoutStopSec=45
+KillMode=control-group
+UMask=0077
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

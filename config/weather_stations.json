@@ -1,0 +1,92 @@
+{
+  "project": "IQAir Yogyakarta PM2.5 & Future Meteorological Forecast Collector",
+  "timezone": "Asia/Jakarta",
+  "forecast_horizon_hours": 72,
+  "providers": {
+    "open_meteo": {
+      "role": "primary_hourly_forecast",
+      "endpoint": "https://api.open-meteo.com/v1/forecast",
+      "resolution": "hourly",
+      "horizon_hours": 72,
+      "variables": [
+        "temperature_2m",
+        "relative_humidity_2m",
+        "precipitation",
+        "rain",
+        "precipitation_probability",
+        "wind_speed_10m",
+        "wind_direction_10m",
+        "surface_pressure",
+        "cloud_cover",
+        "weather_code"
+      ],
+      "units": {
+        "temperature_2m_c": "degC",
+        "relative_humidity_2m_pct": "%",
+        "precipitation_mm": "mm",
+        "rain_mm": "mm",
+        "precipitation_probability_pct": "%",
+        "wind_speed_10m_ms": "m/s",
+        "wind_direction_10m_deg": "deg",
+        "surface_pressure_hpa": "hPa",
+        "cloud_cover_pct": "%",
+        "weather_code": "WMO"
+      }
+    },
+    "bmkg": {
+      "role": "secondary_local_official_forecast",
+      "endpoint": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+      "resolution": "3-hourly",
+      "update_frequency": "twice_daily",
+      "units": {
+        "temperature_c": "degC",
+        "relative_humidity_pct": "%",
+        "precipitation_mm": "mm",
+        "wind_speed_kmh": "km/h",
+        "wind_speed_ms": "m/s",
+        "wind_direction_deg": "deg",
+        "cloud_cover_pct": "%"
+      }
+    }
+  },
+  "stations": [
+    {
+      "station_id": "bmkg_sleman",
+      "source_station_name": "SLEMAN",
+      "iqair_contributor": "Indonesian Meteorology, Climatology, and Geophysics Council",
+      "latitude": -7.731,
+      "longitude": 110.354,
+      "bmkg_adm4": "34.04.06.2002",
+      "bmkg_desa": "Sendangadi",
+      "bmkg_kecamatan": "Mlati",
+      "bmkg_kabupaten": "Sleman"
+    },
+    {
+      "station_id": "dteti_ugm",
+      "source_station_name": "Smart Censor DTETI Lt. 4",
+      "iqair_contributor": "Sensor IQAir DTETI",
+      "latitude": -7.766,
+      "longitude": 110.3718,
+      "bmkg_adm4": "34.04.06.2001",
+      "bmkg_desa": "Sinduadi",
+      "bmkg_kecamatan": "Mlati",
+      "bmkg_kabupaten": "Sleman"
+    },
+    {
+      "station_id": "amaranta_prambanan",
+      "source_station_name": "Amaranta Prambanan",
+      "iqair_contributor": "Hotel Amaranta Prambanan",
+      "latitude": -7.7697,
+      "longitude": 110.5053,
+      "bmkg_adm4": "34.04.09.2004",
+      "bmkg_desa": "Sambirejo",
+      "bmkg_kecamatan": "Prambanan",
+      "bmkg_kabupaten": "Sleman"
+    }
+  ],
+  "pairwise_distance_km": {
+    "bmkg_sleman__dteti_ugm": 4.36,
+    "dteti_ugm__amaranta_prambanan": 14.72,
+    "bmkg_sleman__amaranta_prambanan": 17.22
+  }
+}

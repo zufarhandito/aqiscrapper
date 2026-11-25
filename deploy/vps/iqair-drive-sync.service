@@ -1,0 +1,15 @@
+[Unit]
+Description=Upload IQAir station CSVs to Google Drive (VPS)
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/home/iqair/.config/rclone/rclone.conf
+
+[Service]
+Type=oneshot
+User=iqair
+WorkingDirectory=/home/iqair/iqair-collector
+ExecStart=/bin/sh /home/iqair/iqair-collector/deploy/sync-drive.sh
+TimeoutStartSec=300
+UMask=0077
+StandardOutput=journal
+StandardError=journal

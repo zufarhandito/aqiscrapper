@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily gzipped SQLite backup to Google Drive (03:30 WIB)
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+Persistent=true
+Unit=iqair-sqlite-backup.service
+
+[Install]
+WantedBy=timers.target

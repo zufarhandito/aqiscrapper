@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh Google Drive station CSVs every 15 minutes
+
+[Timer]
+OnCalendar=*-*-* *:05,20,35,50:00
+Persistent=true
+Unit=iqair-drive-sync.service
+
+[Install]
+WantedBy=timers.target

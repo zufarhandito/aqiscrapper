@@ -1,0 +1,16 @@
+[Unit]
+Description=Collect Open-Meteo (hourly) and BMKG (3-hourly) future weather forecasts
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=iqair
+WorkingDirectory=/home/iqair/iqair-collector
+Environment=PYTHONUNBUFFERED=1
+Environment=DATA_DIR=/home/iqair/iqair-collector/data
+ExecStart=/home/iqair/iqair-collector/.venv/bin/python -m iqair_collector weather-once --provider all --horizon 72
+TimeoutStartSec=180
+UMask=0077
+StandardOutput=journal
+StandardError=journal

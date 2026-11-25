@@ -1,0 +1,16 @@
+[Unit]
+Description=Create consistent gzipped SQLite backups and upload to Google Drive
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/home/iqair/.config/rclone/rclone.conf
+
+[Service]
+Type=oneshot
+User=iqair
+WorkingDirectory=/home/iqair/iqair-collector
+Environment=DATA_DIR=/home/iqair/iqair-collector/data
+ExecStart=/bin/sh /home/iqair/iqair-collector/deploy/backup-sqlite-drive.sh
+TimeoutStartSec=300
+UMask=0077
+StandardOutput=journal
+StandardError=journal
